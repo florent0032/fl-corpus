@@ -1,0 +1,146 @@
+{
+  "knowledge_bases": {
+    "jp_anime": {
+      "name": "jp_anime",
+      "description": "日漫语料库",
+      "lang": "ja",
+      "tags": [
+        "日漫",
+        "动画",
+        "日语"
+      ],
+      "source_path": "/home/florent/static/corpus/日语/词库堆/日漫",
+      "db_path": "/home/florent/multi-language-corpus/kb/jp_anime/kb.db",
+      "tokenizer": "trigram",
+      "stats": {
+        "files": 1374,
+        "chunks": 8045,
+        "skipped_ext": 1397,
+        "skipped_empty": 0,
+        "failed": 25
+      },
+      "enabled": true
+    },
+    "jp_drama": {
+      "name": "jp_drama",
+      "description": "日剧语料库",
+      "lang": "ja",
+      "tags": [
+        "日剧",
+        "电视剧",
+        "日语"
+      ],
+      "source_path": "/home/florent/static/corpus/日语/词库堆/日剧",
+      "db_path": "/home/florent/multi-language-corpus/kb/jp_drama/kb.db",
+      "tokenizer": "trigram",
+      "stats": {
+        "files": 65,
+        "chunks": 750,
+        "skipped_ext": 85,
+        "skipped_empty": 0,
+        "failed": 0
+      },
+      "enabled": true
+    },
+    "jp_light_novel": {
+      "name": "jp_light_novel",
+      "description": "轻小说语料库",
+      "lang": "ja",
+      "tags": [
+        "轻小说",
+        "小说",
+        "日语"
+      ],
+      "source_path": "/home/florent/static/corpus/日语/词库堆/轻小说",
+      "db_path": "/home/florent/multi-language-corpus/kb/jp_light_novel/kb.db",
+      "tokenizer": "trigram",
+      "stats": {
+        "files": 50,
+        "chunks": 35374,
+        "skipped_ext": 50,
+        "skipped_empty": 0,
+        "failed": 0
+      },
+      "enabled": true
+    },
+    "jp_novel": {
+      "name": "jp_novel",
+      "description": "小说语料库",
+      "lang": "ja",
+      "tags": [
+        "小说",
+        "文学",
+        "日语"
+      ],
+      "source_path": "/home/florent/static/corpus/日语/词库堆/小说",
+      "db_path": "/home/florent/multi-language-corpus/kb/jp_novel/kb.db",
+      "tokenizer": "trigram",
+      "stats": {
+        "files": 43,
+        "chunks": 11399,
+        "skipped_ext": 43,
+        "skipped_empty": 0,
+        "failed": 0
+      },
+      "enabled": true
+    },
+    "西班牙语动画": {
+      "name": "西班牙语动画",
+      "description": "西班牙语",
+      "lang": "es",
+      "tags": [],
+      "source_path": "/home/florent/static/corpus/西班牙语/动画",
+      "db_path": "/home/florent/multi-language-corpus/kb/西班牙语动画/kb.db",
+      "tokenizer": "trigram",
+      "stats": {
+        "files": 49,
+        "chunks": 505,
+        "skipped_ext": 49,
+        "skipped_empty": 0,
+        "failed": 0
+      },
+      "enabled": true
+    },
+    "anime_arabic": {
+      "name": "anime_arabic",
+      "description": "阿拉伯语动画字幕语料库",
+      "lang": "ar",
+      "tags": [
+        "动画",
+        "字幕",
+        "阿拉伯语"
+      ],
+      "source_path": "/home/florent/static/corpus/阿拉伯语/语料堆",
+      "db_path": "/home/florent/multi-language-corpus/kb/anime_arabic/kb.db",
+      "tokenizer": "trigram",
+      "stats": {
+        "files": 523,
+        "chunks": 7514,
+        "skipped_ext": 235,
+        "skipped_empty": 0,
+        "failed": 66
+      },
+      "enabled": true
+    },
+    "jlpt-n1": {
+      "name": "jlpt-n1",
+      "description": "jlpt的题库",
+      "lang": "ja",
+      "tags": [
+        "考试",
+        "日语"
+      ],
+      "source_path": "/home/florent/static/N1历年试题（处理版）",
+      "db_path": "/home/florent/multi-language-corpus/kb/jlpt-n1/kb.db",
+      "tokenizer": "trigram",
+      "stats": {
+        "files": 372,
+        "chunks": 3692,
+        "skipped_ext": 0,
+        "skipped_empty": 0,
+        "failed": 0
+      },
+      "enabled": true
+    }
+  }
+}

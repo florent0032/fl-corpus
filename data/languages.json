@@ -1,0 +1,147 @@
+{
+  "languages": {
+    "ja": {
+      "name": "日语",
+      "name_en": "Japanese",
+      "rtl": false,
+      "collections": [
+        {
+          "id": "n0",
+          "name": "N0",
+          "desc": "测试词库",
+          "output_format": "ja_entry",
+          "created_at": "2026-06-01T00:00:00"
+        },
+        {
+          "id": "n1",
+          "name": "N1",
+          "desc": "JLPT N1",
+          "output_format": "ja_entry",
+          "created_at": "2026-06-01T00:00:00"
+        },
+        {
+          "id": "n2",
+          "name": "N2",
+          "desc": "JLPT N2",
+          "output_format": "ja_entry",
+          "created_at": "2026-06-01T00:00:00"
+        },
+        {
+          "id": "n3",
+          "name": "N3",
+          "desc": "JLPT N3",
+          "output_format": "ja_entry",
+          "created_at": "2026-06-01T00:00:00"
+        },
+        {
+          "id": "n4",
+          "name": "N4",
+          "desc": "JLPT N4",
+          "output_format": "ja_entry",
+          "created_at": "2026-06-01T00:00:00"
+        },
+        {
+          "id": "n5",
+          "name": "N5",
+          "desc": "JLPT N5",
+          "output_format": "ja_entry",
+          "created_at": "2026-06-01T00:00:00"
+        },
+        {
+          "id": "jp_test",
+          "name": "jp_test",
+          "desc": "日语测试词库",
+          "output_format": "ja_entry",
+          "created_at": "2026-06-11T15:31:29.348085"
+        }
+      ],
+      "accent_service": "ojad",
+      "tokenizer": "mecab",
+      "prompt_template": "japanese"
+    },
+    "ar": {
+      "name": "阿拉伯语",
+      "name_en": "Arabic",
+      "rtl": true,
+      "collections": [
+        {
+          "id": "test",
+          "name": "test",
+          "desc": "阿拉伯语测试词库",
+          "output_format": "arabic_format",
+          "usage_field": "usage",
+          "created_at": "2026-06-11T11:03:33.701285"
+        },
+        {
+          "id": "test_ar1",
+          "name": "test_ar1",
+          "desc": "阿拉伯语测试词库1",
+          "output_format": "arabic_format",
+          "usage_field": "usage",
+          "created_at": "2026-06-11T21:18:11.004081"
+        },
+        {
+          "id": "test_ar2",
+          "name": "test_ar2",
+          "desc": "阿拉伯语测试词库2",
+          "output_format": "arabic_format",
+          "usage_field": "usage",
+          "created_at": "2026-06-11T21:18:11.022941"
+        },
+        {
+          "id": "test_ar3",
+          "name": "test_ar3",
+          "desc": "阿拉伯语测试词库3",
+          "output_format": "arabic_format",
+          "usage_field": "usage",
+          "created_at": "2026-06-11T21:18:11.037846"
+        }
+      ],
+      "accent_service": null,
+      "tokenizer": "camel",
+      "prompt_template": "arabic"
+    },
+    "ko": {
+      "name": "韩语",
+      "name_en": "Korean",
+      "rtl": false,
+      "collections": [
+        {
+          "id": "topik1",
+          "name": "TOPIK I",
+          "desc": "TOPIK 初级",
+          "output_format": "entry_json",
+          "created_at": "2026-06-01T00:00:00"
+        },
+        {
+          "id": "topik2",
+          "name": "TOPIK II",
+          "desc": "TOPIK 中高级",
+          "output_format": "entry_json",
+          "created_at": "2026-06-01T00:00:00"
+        }
+      ],
+      "accent_service": null,
+      "tokenizer": "mecab-ko",
+      "prompt_template": "korean"
+    },
+    "fa": {
+      "name": "波斯语",
+      "name_en": "Persian",
+      "rtl": true,
+      "collections": [],
+      "accent_service": null,
+      "tokenizer": "hazm",
+      "prompt_template": "persian"
+    },
+    "es": {
+      "name": "西班牙语",
+      "name_en": "Spanish",
+      "rtl": false,
+      "collections": [],
+      "accent_service": null,
+      "tokenizer": "spacy",
+      "prompt_template": "spanish"
+    }
+  }
+}

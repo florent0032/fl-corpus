@@ -1,0 +1,176 @@
+{
+  "formats": [
+    {
+      "id": "entry_json",
+      "name": "词条JSON-标准版",
+      "description": "更新后的描述",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string"
+          },
+          "pron": {
+            "type": "string"
+          },
+          "meaning_zh": {
+            "type": "string"
+          },
+          "usages": {
+            "type": "array"
+          }
+        },
+        "required": [
+          "word",
+          "pron",
+          "meaning_zh"
+        ]
+      },
+      "sample_output": "{\"word\":\"食べる\",\"pron\":\"たべる\",\"meaning_zh\":\"吃\",\"usages\":[]}",
+      "retry_prompt": "请严格按照指定JSON格式输出，不要包含markdown标记。",
+      "created_at": "2026-06-10T11:23:15.565058",
+      "updated_at": "2026-06-10T11:23:15.659767"
+    },
+    {
+      "id": "arabic_format",
+      "name": "阿拉伯语词条格式",
+      "description": "阿拉伯语词条的标准输出格式",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "description": "阿拉伯语单词"
+          },
+          "pos": {
+            "type": "string",
+            "description": "词性（动词/名词/形容词/代词/介词/副词）"
+          },
+          "root": {
+            "type": "string",
+            "description": "三字母词根，用 - 连接"
+          },
+          "meaning": {
+            "type": "string",
+            "description": "中文释义"
+          },
+          "pron": {
+            "type": "string",
+            "description": "拉丁转写发音"
+          },
+          "conj": {
+            "type": "array",
+            "description": "变位数组",
+            "items": {
+              "type": "object"
+            }
+          },
+          "usage": {
+            "type": "array",
+            "description": "用例数组",
+            "items": {
+              "type": "object",
+              "properties": {
+                "example": {
+                  "type": "string",
+                  "description": "阿拉伯语例句"
+                },
+                "source": {
+                  "type": "string",
+                  "description": "来源"
+                },
+                "meaning_zh": {
+                  "type": "string",
+                  "description": "中文翻译"
+                }
+              },
+              "required": [
+                "example",
+                "meaning_zh"
+              ]
+            }
+          }
+        },
+        "required": [
+          "word",
+          "pos",
+          "pron",
+          "meaning",
+          "usage"
+        ]
+      },
+      "sample_output": "{\"word\":\"كَتَبَ\",\"pos\":\"动词\",\"root\":\"ك-ت-ب\",\"meaning\":\"写\",\"pron\":\"kataba\",\"conj\":[{\"perfect\":\"كَتَبَ\"},{\"imperfect\":\"يَكْتُبُ\"}],\"usage\":[{\"example\":\"كَتَبَ الطَّالِبُ الدَّرْسَ\",\"source\":\"教材\",\"meaning_zh\":\"学生写了课文\"}]}",
+      "retry_prompt": "请严格按照指定JSON格式输出。meaning字段填写中文释义。usage中每个用例必须包含example和meaning_zh。",
+      "created_at": "2026-06-10T22:28:26.213631",
+      "updated_at": "2026-06-11T17:42:01.758007"
+    },
+    {
+      "id": "ja_entry",
+      "name": "日语词条格式",
+      "description": "日语词条的标准输出格式，包含音调、词性、用例等完整信息",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "description": "日语单词（汉字或假名）"
+          },
+          "pron": {
+            "type": "string",
+            "description": "假名读音"
+          },
+          "accent": {
+            "type": "string",
+            "description": "声调标记，使用带圈数字如 ⓪①②③④⑤"
+          },
+          "pos": {
+            "type": "string",
+            "description": "词性，中文简写如 名、动、形、副、助、连体、表达，多词性用 / 连接"
+          },
+          "meaning_zh": {
+            "type": "string",
+            "description": "简洁中文释义"
+          },
+          "usages": {
+            "type": "array",
+            "description": "用例列表",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source": {
+                  "type": "string",
+                  "description": "来源（书名、作者等）"
+                },
+                "sentence": {
+                  "type": "string",
+                  "description": "日语例句"
+                },
+                "chinese": {
+                  "type": "string",
+                  "description": "中文翻译"
+                }
+              },
+              "required": [
+                "source",
+                "sentence",
+                "chinese"
+              ]
+            }
+          }
+        },
+        "required": [
+          "word",
+          "pron",
+          "accent",
+          "pos",
+          "meaning_zh",
+          "usages"
+        ]
+      },
+      "sample_output": "{\n  \"word\": \"現像\",\n  \"pron\": \"げんぞう\",\n  \"accent\": \"⓪\",\n  \"pos\": \"名/动\",\n  \"meaning_zh\": \"冲洗（胶卷）\",\n  \"usages\": [\n    {\n      \"source\": \"三秋縋『三日間の幸福』\",\n      \"sentence\": \"フィルムの現像が終わるまでの三十分で朝食をとるのが常だった。\",\n      \"chinese\": \"在等待胶卷冲洗完成的三十分钟里吃早饭是他的习惯。\"\n    },\n    {\n      \"source\": \"東野圭吾『白夜行』\",\n      \"sentence\": \"この夜夕飯を食べ終えると、雄一は自室にこもって昼間撮影した写真の現像を始めた。\",\n      \"chinese\": \"这天晚上吃完饭，雄一就窝在自己的房间里，开始冲洗白天拍的照片。\"\n    }\n  ]\n}",
+      "retry_prompt": "你的输出格式不符合规范，请严格按照以下要求修正：\n1. 必须包含 word, pron, accent, pos, meaning_zh, usages 字段\n2. accent 使用带圈数字（⓪①②③④⑤），如无明确声调则留空\n3. pos 使用中文简写（名、动、形、副等），多词性用 / 连接\n4. usages 中每个用例必须包含 source, sentence, chinese 字段\n5. 不要输出 null，未知值用空字符串或空数组\n6. 只输出 JSON，不要 markdown",
+      "created_at": "2026-06-11T10:30:00.000000",
+      "updated_at": "2026-06-11T10:30:00.000000"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+backend/venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Build
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+/tmp/
+
+# Cache
+.cache/
+data/cache/
+
+# Knowledge base databases (large files)
+kb/*.db
+kb/*.db-journal
+kb/*/kb.db
+kb/*/kb.db-journal
+
+# Vendor API keys (敏感信息)
+data/vendors.json
+
+# Temporary files
+*.tmp
+*.bak
+checkpoints/
